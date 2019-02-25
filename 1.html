@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.splide3 {
+    background-color:#e5e5e5;
+    padding-top:1%;
+}
+ 
+.splide3_title {
+    color:#d71b35;
+    margin-top:3%;
+    margin-bottom:3%
+}
+ 
+.splide3_arrow {
+    float:left;
+    width:2%;
+    height:10%;
+    margin-top:12%;
+}
+ 
+.splide3_animate {
+     float:left;
+     background-color:white;
+     margin-left:6%
+}
+ 
+.splide3_arrow_left {
+    margin-left:9%;
+}
+ 
+.splide3_arrow_right {
+    margin-left:5%;
+}
+ 
+ #box{
+        position: relative;
+        margin:0 auto;
+        overflow: hidden;
+    }
+ 
+ .ul_list{
+        position: absolute;
+        padding-left:0px !important;
+    }
+    .li_list{
+        list-style: none;
+        float: left;
+    }
+    .li_list img{
+        width: 100%;
+        height: 100%;
+    }
+    .odiv_nav{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        margin-left: -100px;
+    }
+
+		</style>
+	</head>
+	<body>
+		<div class="splide3">
+        <h1 class="splide3_title">双师外教直播课堂教学模式</h1>
+        <a href="jacascript::void(0)">
+            <div class="splide3_arrow splide3_arrow_left left_click" style="background-image: url(../../Images/ShuangShi/splide3_arrow_left.png)">
+            </div>
+        </a>
+        <div class="splide3_animate">
+            <div id="box">
+                <ul class="ul_list">
+                    <li class="li_list">
+                     <img src="../rash/jquery-fangda-141225212659/big/03.jpg" />  
+                    </li>
+                    <li class="li_list">
+                    <img src="../rash/jquery-fangda-141225212659/big/04.jpg" />   
+                    </li>
+                    <li class="li_list">
+                    		<img src="../rash/jquery-fangda-141225212659/big/01.jpg"
+                    </li>
+                    <li class="li_list">
+                    <img src="../rash/jquery-fangda-141225212659/big/06.jpg" />   
+                    </li>
+                     <li class="li_list">
+                    <img src="../rash/jquery-fangda-141225212659/big/06.jpg" />   
+                    </li>
+                </ul>
+                <ul class="ul_list" style="margin-top:33%">
+                    <li class="li_list">
+                        <h3>小学英语听说课教学模式</h3>
+                    </li>
+                    <li class="li_list">
+                        <h3>初中英语口语课教学模式</h3>
+                    </li>
+                    <li class="li_list">
+                        <h3>初中阅读课教学模式</h3>
+                    </li>
+                    <li class="li_list">
+                        <h3>高中阅读/写作课教学模式</h3>
+                    </li>
+                    <li class="li_list">
+                        <h3>小学英语听说课教学模式</h3>
+                    </li>
+                </ul>
+                <ul class="ul_list" style="margin-top:40%">
+                    <li class="li_list">
+                        <p>每周确定一个与教材相同的话题；每节课的10分钟由中国教师围绕话题预热 ，学习材料中的生词、句式、背景等，外教辅助；外教带领学生课堂活动、对话、纠音、游戏等，中教辅助。 </p>
+                    </li>
+                    <li class="li_list">
+                        <p>每周确定一个与教材相同的主题；每节课的15分钟由中国教师预习、预热和引入主题，外教辅助；外教正式上课，中教辅助。</p>
+                    </li>
+                    <li class="li_list">
+                        <p>根据教材主题每周确定两本原版读物：一本为精读，一本为泛读；每节课前中国教师帮助学生预热精读读物，制定订阅计划，中英文讲解词汇、背景等，外教辅助；外教正式讲解，讨论，中教辅助；课后老师将布置泛读作业。</p>
+                    </li>
+                    <li class="li_list">
+                        <p>利用原汁原味素材提升阅读/写作水平；贴近高考培养英语思维能力和综合能力。</p>
+                    </li>
+                    <li class="li_list">
+                        <p>每周确定一个与教材相同的话题；每节课的10分钟由中国教师围绕话题预热 ，学习材料中的生词、句式、背景等，外教辅助；外教带领学生课堂活动、对话、纠音、游戏等，中教辅助。   </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="jacascript::void(0)">
+            <div class="splide3_arrow splide3_arrow_right right_click" style="background-image: url(../../Images/ShuangShi/splide3_arrow_right.png)">
+            </div>
+        </a>
+        <div>
+            <div class="odiv_nav">
+                <span class="span_list"></span>
+                <span class="span_list"></span>
+                <span class="span_list"></span>
+                <span class="span_list"></span>
+            </div>
+        </div>
+    </div>
+
+	</body>
+	<script src="../day01/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+   <script type="text/javascript">
+   	  $(function () {
+        ScreenRecord();
+ 
+        $(window).resize(function () {
+            ScreenRecord();
+        });
+ 
+ 
+        var num = 0;
+        var timer = null;
+ 
+        go();
+        $("#box").mouseenter(function () {//实现当鼠标移动到box上时，不执行自动轮播功能
+            clearInterval(timer);//移动进去时清除定时器
+        }).mouseleave(function () {
+            go();//移出后执行go函数
+        });
+        $(".span_list").eq(0).css("backgroundColor", "white");
+        //页面加载后默认是第一张图，则让第一个导航圆点变为“选中色”。
+        function go() {
+            timer = setInterval(function () {//设置定时器
+                num++;//用一个全局变量来控制图的运动次数
+                if (num > 4) {//如果移动到了最后一张图，则num赋值1，调整ul边距（相当于初始化）
+                    num = 1;
+                    $(".ul_list").css("margin-left", "0px");
+                }
+                if (num == 4) {//由于圆点只有四个，而图片有五张，当移动到第五张图片时，给第一个圆点“选中色”。
+                    $(".span_list").css("backgroundColor", "transparent");
+                    $(".span_list").eq(0).css("backgroundColor", "white");
+                }
+                else {//图片运动一次，导航圆点也动态的变换，这里先让所有圆点变为“不选中色”，再让当前圆点变为“选中色”。
+                    $(".span_list").css("backgroundColor", "transparent");
+                    $(".span_list").eq(num).css("backgroundColor", "white");
+                }
+                var boxwidth = $('#box').css('width');
+                width = boxwidth.substr(0, boxwidth.length - 2);
+                $(".ul_list").animate({ "marginLeft": -width * num + "px" }, 580);//使用animate实行运动功能
+            }, 2000);
+        }
+ 
+        $(".span_list").each(function (index) {//遍历每一个圆点添加点击事件，点击当前圆点则让num值赋为当前圆点的索引
+            $(this).click(function () {
+                num = index;
+                $(".span_list").css("backgroundColor", "transparent");
+                $(".span_list").eq(num).css("backgroundColor", "white");
+                var boxwidth = $('#box').css('width');
+                width = boxwidth.substr(0, boxwidth.length - 2);
+                $(".ul_list").stop().animate({ "marginLeft": -width * num + "px" }, 580);
+            })
+        });
+ 
+        $(".right_click").click(function () {
+            //右按钮点击事件，每点击一次num++,这里有很多的判断，是用来消除一些BUG的。
+            if (num <= 4) { num++; }
+            if (num > 4) {
+                num = 1;
+                $(".ul_list").css("margin-left", "0px");
+            }
+            if (num == 4) {
+                $(".span_list").css("backgroundColor", "transparent");
+                $(".span_list").eq(0).css("backgroundColor", "white");
+            }
+            else {
+                $(".span_list").css("backgroundColor", "transparent");
+                $(".span_list").eq(num).css("backgroundColor", "white");
+            }
+            var boxwidth = $('#box').css('width');
+            width = boxwidth.substr(0, boxwidth.length - 2);
+            $(".ul_list").stop().animate({ "marginLeft": -width * num + "px" }, 580);
+ 
+        });
+ 
+        $(".left_click").click(function () {//左按钮点击事件
+            if (num >= 0) { num--; }
+            if (num < 0) {
+                var boxwidth = $('#box').css('width');
+                width = boxwidth.substr(0, boxwidth.length - 2);
+                num = 3;
+                $(".ul_list").css("margin-left", boxwidth * -4)
+                $(".span_list").css("backgroundColor", "transparent");
+                $(".span_list").eq(3).css("backgroundColor", "white");
+            }
+            else {
+                $(".span_list").css("backgroundColor", "transparent");
+                $(".span_list").eq(num).css("backgroundColor", "white");
+            }
+            var boxwidth = $('#box').css('width');
+            width = boxwidth.substr(0, boxwidth.length - 2);
+            $(".ul_list").stop().animate({ "marginLeft": -width * num + "px" }, 580);
+ 
+        });
+ 
+    });
+ function ScreenRecord() {
+ 
+        var splide3_height = width * 0.52;
+        $('.splide3').css("height", splide3_height);
+ 
+        var splide3_animate_height = splide3_height * 0.6;
+        var splide3_animate_width = width * 0.66;
+        $('.splide3_animate').css('width', splide3_animate_width);
+        $('.splide3_animate').css('height', splide3_animate_height);
+ 
+        var boxwidth = splide3_animate_width * 0.9;
+        var boxwheigh = splide3_animate_height * 0.6;
+        $('#box').css('width', boxwidth);
+        $('#box').css('height', splide3_animate_height);
+ 
+        $('.li_list').css('width', boxwidth);
+        $('.li_list').css('height', boxwheigh);
+ 
+        $('.ul_list').css('width', boxwidth * 5);
+        $('.ul_list').css('height', boxwheigh);
+ 
+        $('.li_list img').css('width', boxwidth);
+        $('.ul_list img').css('height', boxwheigh);
+}
+
+   </script>
+</html>
